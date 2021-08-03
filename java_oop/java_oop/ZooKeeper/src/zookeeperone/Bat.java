@@ -1,6 +1,5 @@
 
-package zookeepertwo;
-import zookeeperone.Mammal;
+package zookeeperone;
 
 public class Bat extends Mammal {
 	public int energyLevel;
