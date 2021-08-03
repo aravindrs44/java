@@ -1,3 +1,4 @@
+package com.codingdojo.zookeeperpartone;
 
 public class Gorilla extends Mammal {
 	public Gorilla() {
