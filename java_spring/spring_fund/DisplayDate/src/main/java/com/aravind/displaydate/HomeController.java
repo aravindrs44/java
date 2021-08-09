@@ -1,8 +1,8 @@
 package com.aravind.displaydate;
 
-import java.util.Date;
-import java.text.SimpleDateFormat;
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 //import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.stereotype.Controller;
