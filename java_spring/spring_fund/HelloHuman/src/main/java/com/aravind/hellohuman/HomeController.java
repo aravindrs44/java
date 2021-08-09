@@ -9,11 +9,11 @@ public class HomeController {
     public String index(@RequestParam(value = "fname", required = false) String fname, @RequestParam(value = "lname", required = false) String lname) {
         String output;
         if(fname == null && lname == null) {
-        	output = "Hello Human" + "Welcome to Springboot!";
+        	output = "<h1>Hello Human</h1>" + "<br>Welcome to Springboot!";
         } else if(lname == null) {
-        	output = "Hello " + fname + "Welcome to Springboot!";
+        	output = "Hello " + fname + "<br>Welcome to Springboot!";
         } else {
-        	output = "Hello " + fname + " " + lname + "Welcome to Springboot!";
+        	output = "Hello {fname}" + fname + " " + lname + "Welcome to Springboot!";
         }
         
         return output;

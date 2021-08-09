@@ -23,35 +23,6 @@ public class BankAccount {
 		totalMoney += this.checking + this.savings;
 	}
 	
-	private String newAccountNumber() {
-		String accountNumber = "";
-		for(int i = 1; i <= 10; i++) {
-			String temp = Double.toString(Math.floor(Math.random() * 10));
-			accountNumber += temp;
-		}
-		return accountNumber;
-	}
-	
-	public double getChecking() {
-		return this.checking;
-	}
-	
-	public double getSavings() {
-		return this.savings;
-	}
-	
-	public static int getAccountsNum() {
-		return accountsNum;
-	}
-	
-	public double getTotalMoney() {
-		return totalMoney;
-	}
-	
-	public double getAccountTotal() {
-		return this.savings + this.checking;
-	}
-	
 	public void withdraw(String account, double amount) {
 		if(account == "checking") {
 			if(amount > this.checking) {
@@ -79,4 +50,38 @@ public class BankAccount {
 			totalMoney += amount;
 		}
 	}
+	
+	private String newAccountNumber() {
+		String accountNumber = "";
+		for(int i = 1; i <= 10; i++) {
+			String temp = Double.toString(Math.floor(Math.random() * 10));
+			accountNumber += temp;
+		}
+		return accountNumber;
+	}
+	
+	public String getAccountNumber() {
+		return this.accountNumber;
+	}
+	
+	public double getChecking() {
+		return this.checking;
+	}
+	
+	public double getSavings() {
+		return this.savings;
+	}
+	
+	public static int getAccountsNum() {
+		return accountsNum;
+	}
+	
+	public double getTotalMoney() {
+		return totalMoney;
+	}
+	
+	public double getAccountTotal() {
+		return this.savings + this.checking;
+	}
+	
 }
