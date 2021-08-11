@@ -34,12 +34,12 @@ public class BooksApi {
      return book;
  }
  
- @RequestMapping("/api/books/delete/{id}")
+ @RequestMapping(value="/api/books/delete/{id}", method=RequestMethod.DELETE)
  public void delete(@PathVariable("id") Long id) {
 	 bookService.deleteBook(id);
  }
  
- @RequestMapping(value="/api/books/update/{id}", method=RequestMethod.POST)
+ @RequestMapping(value="/api/books/update/{id}", method=RequestMethod.PUT)
  public Book update(@PathVariable("id") Long id, 
 		 @RequestParam(value="title") String title, 
 		 @RequestParam(value="description") String desc, 
